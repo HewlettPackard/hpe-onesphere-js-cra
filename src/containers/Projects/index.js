@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import fetch from 'isomorphic-fetch';
 
 export default class Projects extends Component {
