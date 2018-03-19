@@ -19,7 +19,7 @@ export default class Projects extends Component {
         isLoading: false,
         error: ''
       }))
-      .catch(error => this.setState({ error }));
+      .catch(error => this.setState({ error, isLoading: false }));
     });
   }
   render() {

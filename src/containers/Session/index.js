@@ -17,7 +17,7 @@ export default class Session extends Component {
         fetch('http://localhost:3001/api/session')
           .then(response => response.json())
           .then(json => this.setState({ data: json, isLoading: false }))
-          .catch(error => this.setState({ error }))
+          .catch(error => this.setState({ error, isLoading: false }))
       }
     );
   }

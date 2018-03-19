@@ -51,8 +51,11 @@ class App extends Component {
                         />
                       )
                     }
-                    {isLoading &&
+                    {isLoading && 
                       'It\'s loading!'
+                    }
+                    { error && !isLoading &&
+                      error.toString()
                     }
                   </Box>
                 )
