@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Box from 'grommet/components/Box';
 import Heading from 'grommet/components/Heading';
 import Paragraph from 'grommet/components/Paragraph';
+import { SessionDetailsLayout } from './styles';
 
 export const SessionDetails = ({ session, user }) =>
-  <Box>
+  <SessionDetailsLayout>
     <Heading
       tag="h3"
       margin="small"
@@ -30,13 +30,13 @@ export const SessionDetails = ({ session, user }) =>
     </Heading>
       {user
         ? <Paragraph>
-          id: {user.id}
-          email: {user.email}
+          id: {user.id}<br/>
+          email: {user.email}<br/>
           role: {user.role}
         </Paragraph>
         : <Paragraph>Loading user details...</Paragraph>
       }
-  </Box>;
+  </SessionDetailsLayout>;
 
 SessionDetails.propTypes = {
   session: PropTypes.shape({
