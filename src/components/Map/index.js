@@ -1,8 +1,7 @@
 import React from 'react';
 import Box from 'grommet/components/Box';
 import GoogleMap from 'google-map-react';
-
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+import { MapMarker } from './styles';
 
 export const Map = () =>
   <Box
@@ -15,7 +14,12 @@ export const Map = () =>
         key: 'AIzaSyDgtA0J280tQymNqBB8Qd3It3nxIDulKh8'
       }}
     >
-      <AnyReactComponent lat={59.955413} lng={30.337844} text={'A'} />
+      <MapMarker lat={46.955413} lng={2.337844} status="ok">
+        France East 1
+      </MapMarker>
+      <MapMarker lat={46.955413} lng={3.337844} status="bad">
+        France East 2
+      </MapMarker>
     </GoogleMap>
   </Box>;
 
