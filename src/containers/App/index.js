@@ -10,6 +10,7 @@ import Session from '../Session';
 import Projects from '../Projects';
 import SessionDetails from '../../components/SessionDetails';
 import ProjectTile from '../../components/ProjectTile';
+import Map from '../../components/Map';
 
 class App extends Component {
   render() {
@@ -25,6 +26,11 @@ class App extends Component {
             HPE OneSphere Custom App
           </Title>
         </Header>
+        <Box
+          pad="medium"
+        >
+          <Map />
+        </Box>
         <Box
           pad='medium'
           direction='row'
